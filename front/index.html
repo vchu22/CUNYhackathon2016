@@ -4,6 +4,7 @@
     <title>cunyAdventures</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Cinzel|Righteous|Ubuntu+Condensed" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
       html, body {
@@ -19,11 +20,22 @@
   
   <body>
     <header class="title">
+      <div class="dropdown">
+        <img class="dropbtn" src="down-arrow.svg">
+        <div class="dropdown-content">
+          <a href="#">Brooklyn College</a>
+          <a href="#">Queens College</a>
+          <a href="#">City College</a>
+        </div>
+      </div>
+      
+      
     <img id="headerLogo" src="logocuny.png">
       <div class="points">
         <p>
+          iD: 230-183 <br>
           Level: 2 <br>
-          1200 points
+          1200 credits
         </p>
       </div>
     </header>
@@ -33,7 +45,7 @@
       function initMap() {
         var uluru = {lat: 40.7362689, lng: -73.8161342};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 17,
+          zoom: 15,
           center: uluru
         });
         var marker = new google.maps.Marker({
@@ -41,6 +53,7 @@
           map: map
         });
         
+        //your location
         var infoWindow = new google.maps.InfoWindow({map: map});
         //we need a location spoofer
         if (navigator.geolocation) {
