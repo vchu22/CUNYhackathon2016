@@ -47,3 +47,55 @@ html, body {
   font-family:sans-serif
 }
 }
+
+
+
+@media screen and (max-width: 2400px){
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #map {
+    height: 100%;
+    width: 100%;
+    position:absolute;
+  }
+
+
+  .title{
+    font-size:20px;
+    width:100%;
+    height:auto;
+    background-color:white;
+    position: absolute;
+    z-index:999;
+    border-bottom: 2px grey solid;
+  }
+
+
+  #headerLogo{
+    width:115px;
+    height:auto;
+    padding-top:6px;
+    position:relative;
+    float:left;
+    padding-left: 5px;
+    padding-top: 5px;
+  }
+
+  .points{
+    text-align: center;
+    width:auto;
+    width:auto;
+    float:right;
+    position: relative;
+    margin-right: 15px;
+  }
+
+  .points p{
+    font-size:18px;
+    font-family:sans-serif
+  }
+}
