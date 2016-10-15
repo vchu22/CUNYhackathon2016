@@ -42,7 +42,7 @@
       </div>
       
       <div >
-        <img class="settings" src="settings.svg">
+        <img class="settings"src="settings.svg">
       </div>
     </header>
     
@@ -70,7 +70,7 @@
         var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
         var icons = {
           gym: {
-            icon: "gym.svg"
+            icon: iconBase + 'library_maps.png'
           },
           library: {
             icon: iconBase + 'library_maps.png'
@@ -118,7 +118,7 @@
             };
 
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Your location has been found. Walk around the CUNY campus to start your virtual tour.');
+            infoWindow.setContent('This is your location. Walk around the CUNY campus to start your virtual tour.');
             map.setCenter(pos);
             document.getElementById("queens-college").onclick = function() {
               var pos = {
@@ -168,8 +168,20 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKIxXoW8Z6J5_sExXCgPspZZUBK06V-q0&callback=initMap"
             async defer></script>
 
+    <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase.js"></script>
     <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBefDNjqRGkkS2HWS5iMMZzOo0yu5ZSNqo",
+        authDomain: "cunyhackathon-ec8a6.firebaseapp.com",
+        databaseURL: "https://cunyhackathon-ec8a6.firebaseio.com",
+        storageBucket: "cunyhackathon-ec8a6.appspot.com",
+        messagingSenderId: "960811205628"
+      };
+      firebase.initializeApp(config);
+    </script>
 
+      
 
       </body>
       </html>
